@@ -23,8 +23,12 @@ c.image.attach(io: File.open(path_image), filename: 'vegan.jpeg')
 
 
 path_image = 'public/images/categories/peruvian.jpg'
-c = Category.create(id: 5, title: 'vegana')
+c = Category.create(id: 5, title: 'peruana')
 c.image.attach(io: File.open(path_image), filename: 'peruana.jpg')
+
+path_image = 'public/images/categories/brasileira.jpeg'
+c = Category.create(id: 6, title: 'brasileira')
+c.image.attach(io: File.open(path_image), filename: 'brasileira.jpeg')
 
 
 puts 'Cadastrando Restaurantes'
@@ -122,6 +126,7 @@ prod.image.attach(io: File.open('public/images/products/hosomaki.jpg'), filename
 prod = Product.create!(name: 'Hot roll - 10 unidades', price: 12, description: '10 unidades.',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
 
+
 # Vegan Restaurants
 path_image = 'public/images/restaurants/7.jpeg'
 r = Restaurant.create!(
@@ -152,3 +157,16 @@ prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alf
 prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
 prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+
+path_image = 'public/images/restaurants/ru_ufcrussas.jpg'
+r = Restaurant.create!(
+  name: 'Restaurante Universitário do Campus de Russas',
+  description: 'Temos as melhores refeições para os estudante, Quanta-feira é dia de feijoada ;). Suinos garoto?',
+  status: 'open', delivery_tax: 0,
+  state: 'CE', city: 'Russas', street: 'Av Cel Araújo Lima',
+  number: '1358', neighborhood: 'Centro', category_id: 6
+)
+r.image.attach(io: File.open(path_image), filename: 'ru_ufcrussas.jpg')
+pc = ProductCategory.create!(title: 'brasileira', restaurant: r)
+prod = Product.create!(name: 'Feijoada de qualidade', price: 1.10, description: 'carne Suina, Feijão Preto, Alface americana, roxa, linguiça cozida, cenoura, tomate, farofa, arroz, acompanha doce.', product_category: pc)
+prod.image.attach(io: File.open('public/images/products/feijoada.jpg'), filename: 'feijoada.jpg')

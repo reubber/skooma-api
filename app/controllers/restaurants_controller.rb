@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: :show
 
   def index
-    @restaurants = Restaurant.near(params[:city] || 'Fortaleza')
+    @restaurants = Restaurant.near(params[:city] || 'São Paulo')
     filter_by_category if params[:category]
     render json: @restaurants
   end
@@ -17,15 +19,8 @@ class RestaurantsController < ApplicationController
     ).result
     @restaurants = @restaurants.near(params[:city]) if params[:city]
     render json: @restaurants
-
   end
 
-  private
-
-  def set_restaurant
-    @restaurant = Restaurant.find_by(id: params[:id])
-  end
-  
   private
 
   def filter_by_category
@@ -34,4 +29,7 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def set_restaurant
+    @restaurant = Restaurant.find_by(id: params[:id])
+  end
 end
