@@ -1,23 +1,23 @@
 # README
 
-## SOBRE
+The project is basically a ruby ​​application with instructions and routines that allows access to its functionality by other software. In this case, my personal skooma project is consuming this api. [https://github.com/reubber/skooma]
 
-O projeto é basicamente uma api feita em ruby com instruções e rotinas que permite o acesso às suas funcionalidades por um outro software. Nesse caso, meu projeto pessoal skooma esta consumindo esta api. [https://github.com/reubber/skooma]
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Things you must have to run the project:
 
 * Ruby version
-
+  - `ruby 2.6.3`
+  - `rails 5.2.3`
 * System dependencies
+  - any operation system
 
 * Configuration
+Install all of the required gems from your specified sources:
+  - `bundle install`
 
 * Database creation
+  - `rails db:create`
+  - `rails db:migrate`
+  - `db:seed`
 
 * Database initialization
 
@@ -26,5 +26,5 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+  - `rails s -p 3001`
 * ...
