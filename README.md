@@ -1,6 +1,10 @@
 # README
 
-The project is basically a ruby ​​application with instructions and routines that allows access to its functionality by other software. In this case, my personal skooma project is consuming this api. [https://github.com/reubber/skooma]
+This mpv is basically a ruby ​​application with instructions and routines that allows access to its functionality by other software. In this case, my personal skooma project is consuming this api. 
+
+
+* Application for use is available at:
+https://github.com/reubber/skooma
 
 Things you must have to run the project:
 
