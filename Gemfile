@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 gem 'active_model_serializers', '~> 0.10.2' # serializers
-gem 'geocoder', '~> 1.5', '>= 1.5.1' # Complete Ruby geocoding solutio
+gem 'geocoder', '~> 1.6' # Complete Ruby geocoding solutio
 gem 'ransack' # Object-based searching
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
